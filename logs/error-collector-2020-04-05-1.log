@@ -1,0 +1,42 @@
+[2020-04-03T10:34:34.351+08:00] [WARN] [main-1] [com.theone.collector.CollectorApplication] [192.168.31.8] [liuyudeMacBook-Pro.local/192.168.31.8] [collector] [CollectorApplication.java,15,com.theone.collector.CollectorApplication,main] [一条警告111] ## ''[2020-04-03T10:34:34.351+08:00] [WARN] [main-1] [com.theone.collector.CollectorApplication] [192.168.31.8] [liuyudeMacBook-Pro.local/192.168.31.8] [collector] [CollectorApplication.java,15,com.theone.collector.CollectorApplication,main] [一条警告] ## ''
+[2020-04-03T10:34:34.351+08:00] [WARN] [main-1] [com.theone.collector.CollectorApplication] [192.168.31.8] [liuyudeMacBook-Pro.local/192.168.31.8] [collector] [CollectorApplication.java,15,com.theone.collector.CollectorApplication,main] [一条警告] ## ''
+[2020-04-03T10:37:34.351+08:00] [WARN] [main-1] [com.theone.collector.CollectorApplication] [192.168.31.8] [liuyudeMacBook-Pro.local/192.168.31.8] [collector] [CollectorApplication.java,15,com.theone.collector.CollectorApplication,main] [一条警告] ## ''
+[2020-04-03T10:34:34.351+08:00] [WARN] [main-1] [com.theone.collector.CollectorApplication] [192.168.31.8] [liuyudeMacBook-Pro.local/192.168.31.8] [collector] [CollectorApplication.java,15,com.theone.collector.CollectorApplication,main] [一条警告111] ## ''
+[2020-04-03T10:34:34.351+08:00] [WARN] [main-1] [com.theone.collector.CollectorApplication] [192.168.31.8] [liuyudeMacBook-Pro.local/192.168.31.8] [collector] [CollectorApplication.java,15,com.theone.collector.CollectorApplication,main] [一条警告22] ## ''
+[2020-04-05T19:29:25.055+08:00] [WARN] [main-1] [com.theone.collector.CollectorApplication] [192.168.31.8] [liuyudeMacBook-Pro.local/192.168.31.8] [collector] [CollectorApplication.java,15,com.theone.collector.CollectorApplication,main] [一条警告] ## ''
+[2020-04-05T19:29:57.939+08:00] [WARN] [main-1] [org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext] [192.168.31.8] [liuyudeMacBook-Pro.local/192.168.31.8] [] [AbstractApplicationContext.java,557,org.springframework.context.support.AbstractApplicationContext,refresh] [Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'demoController' defined in file [/Users/liuyu/tools/idea-workspace/spring-cloud-alibaba-demo/projects/collector/target/classes/com/theone/collector/controller/DemoController.class]: Instantiation of bean failed; nested exception is java.lang.ExceptionInInitializerError] ## ''
+[2020-04-05T19:29:57.959+08:00] [ERROR] [main-1] [org.springframework.boot.SpringApplication] [192.168.31.8] [liuyudeMacBook-Pro.local/192.168.31.8] [] [SpringApplication.java,858,org.springframework.boot.SpringApplication,reportFailure] [Application run failed] ## ' org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'demoController' defined in file [/Users/liuyu/tools/idea-workspace/spring-cloud-alibaba-demo/projects/collector/target/classes/com/theone/collector/controller/DemoController.class]: Instantiation of bean failed; nested exception is java.lang.ExceptionInInitializerError
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1303)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1197)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:555)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:515)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$$Lambda$127/712732521.getObject(Unknown Source)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:843)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:877)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:549)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:142)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:775)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:316)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1260)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1248)
+	at com.theone.collector.CollectorApplication.main(CollectorApplication.java:12)
+Caused by: java.lang.ExceptionInInitializerError
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:422)
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:172)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:87)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1295)
+	... 18 more
+Caused by: java.lang.NullPointerException
+	at com.theone.collector.util.InputMDC.putMDC(InputMDC.java:26)
+	at com.theone.collector.controller.DemoController.<clinit>(DemoController.java:13)
+	... 25 more
+'
+[2020-04-05T19:30:45.356+08:00] [WARN] [http-nio-8010-exec-3-36] [org.springframework.web.servlet.mvc.support.DefaultHandlerExceptionResolver] [] [] [] [AbstractHandlerExceptionResolver.java,198,org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver,logException] [Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' not supported]] ## ''
